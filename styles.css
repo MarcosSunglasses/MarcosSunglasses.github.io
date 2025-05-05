@@ -7,25 +7,24 @@
 body {
     background-color: black;
     font-family: Arial, sans-serif;
-    color: black; /* Todo el texto en negro */
-    height: 100vh; /* Altura completa de la ventana */
+    color: black; 
+    height: 100vh; 
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Sin barras de desplazamiento */
+    overflow: hidden; 
 
-    /* Fondo con la imagen local */
     background-image: url('Archivos/BG.png');
-    background-size: cover; /* Ajusta el tamaño para cubrir toda la pantalla */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* No repetir la imagen */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
 }
 
 .container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh; /* Altura de la ventana completa */
+    height: 100vh; 
     width: 100%;
 }
 
@@ -38,7 +37,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px; /* Espacio entre el texto y la imagen */
+    gap: 10px; 
 }
 
 .profile-img {
@@ -61,8 +60,8 @@ p {
 }
 
 .custom-container {
-    background-color: #D5B9A3; /* Color más claro */
-    border: 2px solid black; /* Bordes negros */
+    background-color: #D5B9A3; 
+    border: 2px solid black; 
     padding: 20px;
     text-align: center;
     margin: 20px 0;
@@ -81,13 +80,13 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row; /* Botones en fila */
+    flex-direction: row; 
     margin-bottom: 20px;
-    gap: 20px; /* Espaciado entre botones */
+    gap: 20px; 
 }
 
 button {
-    background-color: #D5B9A3; /* Color más claro */
+    background-color: #D5B9A3; 
     color: black;
     border: 2px solid black;
     padding: 20px 40px;
@@ -100,7 +99,7 @@ button {
 }
 
 button:hover {
-    background-color: #C2A38E; /* Un poco más oscuro */
+    background-color: #C2A38E; 
     color: black;
 }
 
@@ -167,7 +166,6 @@ button:hover {
     }
 }
 
-/* Botón oculto en la esquina inferior derecha */
 .secret-button {
     position: absolute;
     bottom: 10px;
