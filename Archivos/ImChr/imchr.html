@@ -1,0 +1,335 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ImChr Games</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="logo.png">
+<style>
+    body {
+        margin: 0;
+        background-color: #000;
+        font-family: 'Press Start 2P', cursive;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* --- Gradiente general para texto --- */
+    .gradient-text, 
+    p, 
+    .organizer, 
+    .guard, 
+    strong, 
+    em, 
+    span, 
+    header h1, 
+    section h2 {
+        background: linear-gradient(to right, #00ffff, #8000ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: 1px;
+    }
+
+    /* --- Header --- */
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+    header img {
+        height: 70px;
+    }
+    header h1 {
+        font-size: 2em;
+        margin: 0;
+    }
+
+    /* --- Secciones --- */
+    section {
+        background-color: #000;
+        padding: 30px 20px;
+        max-width: 900px;
+        width: 100%;
+        text-align: justify;
+    }
+    section h2 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    section p {
+        font-size: 12px;
+        margin: 12px 0;
+        line-height: 1.6;
+    }
+
+    /* --- Organizadores y Guardias --- */
+    .organizer, .guard {
+        background-color: #000;
+        padding: 15px;
+        margin: 15px auto;
+        border-radius: 5px;
+        max-width: 600px;
+        text-align: justify;
+        font-size: 12px;
+        line-height: 1.5;
+        border: 1px solid #333;
+    }
+
+    /* --- Frase del evento --- */
+    .event-quote {
+        font-size: 1.2em;
+        margin: 40px 0;
+        background: linear-gradient(to right, #00ffff, #8000ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: 2px;
+        text-align: center;
+        font-style: italic;
+    }
+
+    /* --- Galería --- */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+.gallery img {
+    flex: 1 1 calc(33.33% - 15px);
+    max-width: calc(33.33% - 15px);
+    height: auto; /* mantiene la proporción original */
+    transition: transform 0.3s;
+}
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .gallery img {
+        flex: 1 1 calc(50% - 15px);
+        max-width: calc(50% - 15px);
+    }
+}
+@media (max-width: 480px) {
+    .gallery img {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h1>ImChr Games</h1>
+    <img src="logo.png" alt="Logo oficial de ImChr Games">
+</header>
+
+<!-- Descripción -->
+<section>
+    <h2>Descripción del Evento</h2>
+    <p><strong>ImChr Games</strong> es un evento organizado por <span>Holmen 3055-A</span> y <span>MIAUFAEL</span> con el objetivo de demostrar habilidades y competir por el título de ganador.</p>
+    <p>Los jugadores deberán enviar una solicitud de conexión a la cuenta oficial del evento en Roblox: <strong>ImChrGames</strong>.</p>
+    <p>Para participar, cada jugador deberá crear un <em>Gamepass</em> en un juego personal con un costo de <strong>715 Robux</strong>.</p>
+    <p>Si un jugador desea cambiar su rol a <em>guardia</em>, podrá enviar una solicitud a la cuenta oficial del evento, la cual será revisada por los organizadores.</p>
+    <p>El evento se llevará a cabo el <strong>20 de diciembre de 2025</strong>. Para dudas, contactar a la cuenta oficial o a cualquiera de los organizadores/guardias.</p>
+</section>
+
+<!-- Inscripción -->
+<section>
+    <h2>Inscripción</h2>
+    <p>Para participar en <strong>ImChr Games</strong>, se le solicita visitar la cuenta oficial en Roblox:</p>
+
+    <div style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 15px 0;
+    ">
+        <a href="https://www.roblox.com/es/users/8424092341/profile" target="_blank" style="
+            background: linear-gradient(to right, #00ffff, #8000ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: underline;
+            padding: 10px 20px;
+            border: 2px solid #00ffff;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        " onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 10px #00ffff';" 
+           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">
+            ImChrGames
+        </a>
+    </div>
+
+    <p>Si desea participar como <strong>jugador</strong>, se le solicita enviar una solicitud de conexión a la cuenta. La aceptación será revisada y aprobada por un organizador.</p>
+    <p>Si desea participar como <strong>guardia</strong>, se le solicita enviar la solicitud de conexión y un mensaje con la palabra <strong>"Guardia"</strong>. En caso de que aún existan puestos disponibles, un organizador aprobará la solicitud, se cambiará el rol correspondiente y aparecerá en la página.</p>
+    <p>Asimismo, se le pedirá una fecha para indicarle las instrucciones sobre qué hacer y qué no hacer durante el evento.</p>
+</section>
+
+<!-- Datos -->
+<section>
+    <h2>Datos del Evento</h2>
+    <p><strong>Fecha:</strong> 20 de diciembre de 2025</p>
+    <p><strong>Hora:</strong> 3:55 PM (horario boliviano)</p>
+    <p>Para consultas o contacto con los organizadores, se recomienda utilizar sus <strong>páginas principales</strong> o sus <strong>usuarios en Roblox</strong>. Se considera más seguro que las respuestas se reciban a través de las páginas principales.</p>
+    <p>Licencia del contenido: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" style="
+        color: #00ffff;
+        text-decoration: underline;
+    ">Creative Commons BY-NC-SA 4.0</a></p>
+</section>
+
+
+
+<!-- Organizadores -->
+<section>
+    <h2>Organizadores</h2>
+    
+    <div class="organizer">
+        <strong>Holmen 3055-A</strong><br>
+        Creador digital: programador, músico y productor audiovisual. También conocido como <strong>MarcosSunglasses</strong>. Creador del universo digital <strong>"Chr0noWav3"</strong>.<br><br>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
+            <a href="https://holmenus3055a.github.io" target="_blank" style="
+                padding: 8px 15px;
+                background: linear-gradient(to right, #00ffff, #8000ff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                border: 2px solid #00ffff;
+                border-radius: 6px;
+                font-weight: bold;
+                text-decoration: none;
+                transition: transform 0.2s, box-shadow 0.2s;
+            " onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 10px #00ffff';" 
+               onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">Página principal</a>
+
+            <a href="https://www.roblox.com/es/users/1238059687/profile" target="_blank" style="
+                padding: 8px 15px;
+                background: linear-gradient(to right, #00ffff, #8000ff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                border: 2px solid #00ffff;
+                border-radius: 6px;
+                font-weight: bold;
+                text-decoration: none;
+                transition: transform 0.2s, box-shadow 0.2s;
+            " onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 10px #00ffff';" 
+               onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">Usuario de Roblox</a>
+        </div>
+    </div>
+    
+    <div class="organizer">
+        <strong>MIAUFAEL</strong><br>
+        Creador digital: animador y desarrollador. Creador del universo digital <strong>"ImLand"</strong>.<br><br>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px;">
+            <a href="https://www.youtube.com/@Miaufael4570" target="_blank" style="
+                padding: 8px 15px;
+                background: linear-gradient(to right, #00ffff, #8000ff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                border: 2px solid #00ffff;
+                border-radius: 6px;
+                font-weight: bold;
+                text-decoration: none;
+                transition: transform 0.2s, box-shadow 0.2s;
+            " onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 10px #00ffff';" 
+               onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">Página principal</a>
+
+            <a href="https://www.roblox.com/es/users/2055487868/profile" target="_blank" style="
+                padding: 8px 15px;
+                background: linear-gradient(to right, #00ffff, #8000ff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                border: 2px solid #00ffff;
+                border-radius: 6px;
+                font-weight: bold;
+                text-decoration: none;
+                transition: transform 0.2s, box-shadow 0.2s;
+            " onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 10px #00ffff';" 
+               onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">Usuario de Roblox</a>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Guardias -->
+<section>
+    <h2>Guardias</h2>
+    
+    <div class="guard" style="text-align: center; margin-bottom: 20px;">
+        <strong>Cat_Nap</strong><br><br>
+        <a href="https://www.roblox.com/es/users/5680978997/profile" target="_blank" style="
+            padding: 8px 15px;
+            background: linear-gradient(to right, #00ffff, #8000ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border: 2px solid #00ffff;
+            border-radius: 6px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        " onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 10px #00ffff';" 
+           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">Usuario de Roblox</a>
+    </div>
+    
+    <div class="guard" style="text-align: center; margin-bottom: 20px;">
+        <strong>Joselito</strong><br><br>
+        <a href="https://www.roblox.com/es/users/1766822295/profile" target="_blank" style="
+            padding: 8px 15px;
+            background: linear-gradient(to right, #00ffff, #8000ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border: 2px solid #00ffff;
+            border-radius: 6px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        " onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 10px #00ffff';" 
+           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">Usuario de Roblox</a>
+    </div>
+    
+    <div class="guard" style="text-align: center; margin-bottom: 20px;">
+        <strong>Fabri_Vtx</strong><br><br>
+        <a href="https://www.roblox.com/es/users/558141988/profile" target="_blank" style="
+            padding: 8px 15px;
+            background: linear-gradient(to right, #00ffff, #8000ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border: 2px solid #00ffff;
+            border-radius: 6px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+        " onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 0 10px #00ffff';" 
+           onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';">Usuario de Roblox</a>
+    </div>
+</section>
+
+
+<!-- Frase del evento -->
+<section>
+    <p class="event-quote">"¿Desearía tener la oportunidad de ganar en uno de los dos posibles universos? ¿O quedarse en el suyo propio por el resto de la vida?"</p>
+</section>
+
+<!-- Galería -->
+<section>
+    <div class="gallery">
+        <img src="imagen1.png" alt="Miniatura oficial del evento ImChr Games">
+        <img src="imagen2.png" alt="Invitación técnica al evento ImChr Games">
+        <img src="imagen3.png" alt="Invitación a participar como jugador en ImChr Games">
+    </div>
+</section>
+
+
+</body>
+</html>

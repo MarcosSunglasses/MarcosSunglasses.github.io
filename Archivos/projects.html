@@ -1,8 +1,15 @@
 ﻿<!DOCTYPE html>
 <html lang="es">
 <head>
-    <link rel="stylesheet" href="../styles2.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyectos</title>
+    <link rel="stylesheet" href="../styles2.css">
+    <link rel="icon" href="icon.png" type="image/png">
+
+    <!-- Fuente pixel -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
     <style>
         h1 {
             position: absolute;
@@ -22,15 +29,17 @@
             transform: translateX(-50%);
             display: flex;
             gap: 60px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         button {
-            font-size: 1.3em; /* Tamaño más grande */
-            padding: 15px 30px; /* Más grande sin exagerar */
+            font-size: 1.3em;
+            padding: 15px 30px;
             border: none;
             cursor: pointer;
             font-weight: bold;
-            border-radius: 8px; /* Menos redondeado */
+            border-radius: 8px;
         }
 
         .dreamdeath {
@@ -57,8 +66,32 @@
             background: linear-gradient(180deg, #FF0000, #FFFF00, #00FF00);
             color: black;
         }
+
+        /* Botón ImChrGames: fondo negro sólido y texto gradiente */
+        .imchr-button {
+            font-family: 'Press Start 2P', cursive;
+            background-color: black; /* Fondo negro sólido */
+            padding: 15px 30px;
+            font-size: 1.3em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .imchr-button span {
+            background-image: linear-gradient(to right, #00ffff, #8000ff); /* Gradiente del texto */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+
+        .imchr-button:hover span {
+            transform: scale(1.05);
+        }
     </style>
-  <link rel="icon" href="icon.png" type="image/png">
 </head>
 <body>
     <h1>Proyectos</h1>
@@ -69,6 +102,7 @@
         <a href="../index.html"><button class="absoluto">Absoluto</button></a>
         <a href="https://marcossunglasses.itch.io"><button class="itch">Itch</button></a>
         <a href="https://marcossunglasses.github.io/Archivos/bicentenarioteatro/bicentenarioteatro.html"><button class="bicentenarioteatro">Bicentenario Teatro</button></a>
+        <a href="ImChr/imchr.html"><button class="imchr-button"><span>ImChrGames</span></button></a>
     </div>
 </body>
 </html>
