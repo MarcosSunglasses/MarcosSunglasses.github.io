@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TobogAnthony</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-family: "Georgia", serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            text-align: center;
+        }
+
+        .header {
+            margin-top: 40px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.2em;
+            font-weight: normal;
+        }
+
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 1em;
+            font-weight: normal;
+        }
+
+        .center-link {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .trailer-link {
+            font-size: 1.3em;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        /* Pantalla de cine */
+        .cinema-player {
+            display: none; /* Oculto hasta hacer clic */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .cinema-player iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <div class="header">
+        <h1>TobogAnthony</h1>
+        <p>Un simple tobogan puede ser intercosmico.</p>
+    </div>
+
+    <!-- Link al centro -->
+    <div class="center-link">
+        <span class="trailer-link" onclick="openCinema()">Ver pelicula</span>
+    </div>
+
+    <!-- Reproductor estilo cine -->
+    <div class="cinema-player" id="cinemaPlayer">
+        <iframe id="youtubePlayer" src="" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        function openCinema() {
+            const player = document.getElementById("youtubePlayer");
+            document.getElementById("cinemaPlayer").style.display = "flex";
+            player.src = "https://www.youtube.com/embed/DVr1AOZ3xRk?autoplay=1";
+        }
+    </script>
+
+</body>
+</html>
