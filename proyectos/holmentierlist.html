@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de videos e imágenes de YouTube</title>
+    <style>
+        /* Modo claro */
+        .light-mode {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .light-mode button {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .light-mode textarea {
+            background-color: #fff;
+            color: #000;
+        }
+
+        /* Modo oscuro */
+        .dark-mode {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .dark-mode button {
+            background-color: #222;
+            color: #fff;
+        }
+
+        .dark-mode textarea {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* Modo medianoche */
+        .midnight-mode {
+            background-color: #121212;
+            color: #b0d0f2;
+        }
+
+        .midnight-mode button {
+            background-color: #1c1c1c;
+            color: #b0d0f2;
+        }
+
+        .midnight-mode textarea {
+            background-color: #1f1f1f;
+            color: #b0d0f2;
+        }
+
+        /* Modo madrugada */
+        .dawn-mode {
+            background-color: #fdf5e6;
+            color: #4f4f4f;
+        }
+
+        .dawn-mode button {
+            background-color: #f1a800;
+            color: #fff;
+        }
+
+        .dawn-mode textarea {
+            background-color: #fff5e6;
+            color: #4f4f4f;
+        }
+
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        textarea {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            width: 80%;
+            height: 100px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #1e88e5;
+            color: #fff;
+            margin: 20px auto;
+            display: block;
+        }
+
+        button:hover {
+            background-color: #1565c0;
+        }
+
+        .videos-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .content-item {
+            margin: 15px;
+            text-align: center;
+        }
+
+        iframe {
+            width: 300px;
+            height: 200px;
+        }
+
+        .image-item {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        h3 {
+            margin-top: 10px;
+            font-size: 18px;
+            color: inherit;
+        }
+
+        #modeButton {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #1e88e5;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #modeButton:hover {
+            background-color: #1565c0;
+        }
+
+        p {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            color: #1e88e5;
+        }
+
+        p span {
+            color: #1e88e5;
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <div class="container">
+        <h1>Visualizador de videos e imágenes de YouTube</h1>
+        <textarea id="videoLinks" placeholder="Inserta los enlaces de los videos de YouTube o imágenes, uno por línea"></textarea>
+        <button id="showButton" onclick="displayContent()">Mostrar</button>
+        <div id="content" class="videos-grid"></div>
+    </div>
+    <button id="modeButton" onclick="cycleMode()">Estilo</button>
+    <p>Creado por Holmen <span>3055-A</span></p>
+
+    <script>
+        let currentMode = 0;
+        const modes = ['light', 'dark', 'midnight', 'dawn'];
+
+        function displayContent() {
+            const input = document.getElementById('videoLinks').value.split('\n');
+            const container = document.getElementById('content');
+            container.innerHTML = '';
+
+            input.forEach(link => {
+                link = link.trim();
+                if (!link) return;
+
+                let elementDiv = document.createElement('div');
+                elementDiv.classList.add('content-item');
+
+                // Detecta si es imagen
+                if (link.match(/\.(jpeg|jpg|gif|png|webp)$/i)) {
+                    elementDiv.innerHTML = `<img src="${link}" class="image-item" alt="Imagen">
+                                            <h3 contenteditable="true">Título de la Imagen</h3>`;
+                } else {
+                    const videoId = extractVideoId(link);
+                    if (videoId) {
+                        elementDiv.innerHTML = `<iframe src="https://www.youtube.com/embed/${videoId}" frameborder="0" allowfullscreen></iframe>
+                                                <h3 contenteditable="true">Título del Video</h3>`;
+                    }
+                }
+                container.appendChild(elementDiv);
+            });
+        }
+
+        function extractVideoId(url) {
+            try {
+                if (url.includes('youtu.be')) {
+                    return url.split('/').pop().split('?')[0];
+                } else if (url.includes('youtube.com')) {
+                    const urlObj = new URL(url);
+                    return urlObj.searchParams.get('v');
+                }
+            } catch {
+                return null;
+            }
+            return null;
+        }
+
+        function cycleMode() {
+            currentMode = (currentMode + 1) % modes.length;
+            const body = document.body;
+            const showButton = document.getElementById('showButton');
+
+            body.className = `${modes[currentMode]}-mode`;
+            showButton.className = '';
+            showButton.classList.add(modes[currentMode] + '-mode');
+
+            console.log(`Modo actual: ${modes[currentMode]}`);
+        }
+    </script>
+</body>
+</html>

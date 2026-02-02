@@ -6,36 +6,57 @@
     <title>MarcosSunglasses</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script> 
-    <link rel="icon" href="Archivos/icon.png" type="image/png">
-</head>
+    <link rel="icon" href="proyectos/icon.png" type="image/png">
 
+    <style>
+        /* Estilo para el botón de esquina inferior derecha */
+        .corner-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background-color: transparent;
+            padding: 0;
+        }
+
+        .corner-button img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    </style>
+</head>
 <body>
     <div class="container">
         
         <div class="header">
             <div class="title-container">
                 <h1 class="changing-text">MarcosSunglasses</h1>
-                <img src="Archivos/Marcos.png" alt="Zynez" class="profile-img">
+                <img src="proyectos/Marcos.png" alt="Zynez" class="profile-img">
             </div>
             <p>Creador de la identidad digital "Holmen 3055-A"</p>
         </div>
 
         <div class="custom-container">
             <p class="custom-text">
-                Soy Marco Ezequiel, conocido digitalmente como MarcosSunglasses o Holmen 3055-A. 
+                Soy Marco Ezequiel, conocido digitalmente como MarcosSunglasses MS o Holmen 3055-A. 
                 Soy un creador digital pequeño enfocado en desarrollo de juegos, composición musical y producción audiovisual.  
-                Esta es la página web de mi segunda identidad digital. Para una biografía más detallada, puedes visitar mi página principal con el botón de "Holmen 3055-A".
+                Esta es la página web de mi segunda identidad digital. Para ver mi otra identidad puedes hacer click al icono de "H".
             </p>
 
             <p class="custom-text">
-                También puedes ver los proyectos relacionados a esta segunda identidad con los otros dos botones.
+                También puedes ver mis demas proyectos e informacion de ellos con los otros botones.
             </p>
         </div>
 
         <div class="buttons-container">
-            <a href="Archivos/projects.html" target="_blank"><button>Proyectos</button></a>
+            <a href="proyectos.html"><button>Proyectos</button></a>
             <a href="https://www.youtube.com/@MarcosSunglasses/" target="_blank"><button>Videos</button></a>
-            <a href="https://holmenus3055a.github.io" target="_blank"><button>Holmen 3055-A</button></a>
+            <a href="wikipedia.html"><button>Wikipedia</button></a>
         </div>
 
         <div class="footer">
@@ -50,6 +71,11 @@
                 </p>
             </div>
         </div>
+
+        <!-- Botón de esquina inferior derecha -->
+        <a href="https://holmenus3055a.github.io" class="corner-button">
+            <img src="proyectos/zynez.png" alt="Holmen 3055-A">
+        </a>
 
     </div>
 </body>

@@ -1,0 +1,48 @@
+﻿body {
+    background-color: black;
+    color: #0037ff; /* Azul intenso */
+}
+
+p {
+    color: #0037ff;
+}
+
+.custom-container {
+    border-color: #0037ff; /* Bordes azules */
+    background-color: black;
+}
+
+.custom-text {
+    color: #0037ff; /* Texto azul */
+}
+
+button {
+    background-color: black;
+    color: #0037ff;
+    border-color: #0037ff;
+}
+
+button:hover {
+    background-color: #0037ff;
+    color: black;
+}
+
+.social-info {
+    color: #0037ff;
+}
+
+.instagram {
+    color: #ff69b4; /* Rosa */
+}
+
+.discord {
+    color: #8a2be2; /* Morado */
+}
+
+.contact-info {
+    color: #0037ff;
+}
+
+.secret-button {
+    color: #0037ff;
+}

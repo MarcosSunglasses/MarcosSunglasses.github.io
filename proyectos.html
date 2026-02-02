@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyectos</title>
-    <link rel="stylesheet" href="../styles2.css">
-    <link rel="icon" href="icon.png" type="image/png">
+
+    <link rel="stylesheet" href="proyectos/styles2.css">
+    <link rel="icon" href="proyectos/icon.png" type="image/png">
 
     <!-- Fuente pixel -->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -109,6 +110,12 @@
             font-weight: bold;
         }
 
+        /* NUEVO BOTON: Visualizador de Vid, Img */
+        .visualizador {
+            background-color: white;
+            color: black;
+        }
+
         @media (max-width: 600px) {
             header h1 {
                 font-size: 2em;
@@ -128,43 +135,48 @@
     <header>
         <h1>Proyectos</h1>
     </header>
-    
-    <div class="buttons-container">
-        <a href="https://dreamdeathmovie.github.io"><button class="dreamdeath">Dreamdeath</button></a>
-        <a href="https://drive.google.com/file/d/11EnnvBk4-mxupK6BWdK3lYNzN-q_Zue8/view?usp=sharing"><button class="chroma">Chrom@</button></a>
+<div class="buttons-container">
+    <a href="https://dreamdeathmovie.github.io" target="_blank"><button class="dreamdeath">Dreamdeath</button></a>
+    <a href="https://drive.google.com/file/d/11EnnvBk4-mxupK6BWdK3lYNzN-q_Zue8/view?usp=sharing" target="_blank"><button class="chroma">Chrom@</button></a>
 
-        <!-- ABSOLUTO -->
-        <a href="#" id="absoluto-link">
-            <button class="absoluto">Absoluto</button>
-        </a>
+    <a href="#" id="absoluto-link" target="_blank">
+        <button class="absoluto">Absoluto</button>
+    </a>
 
-        <a href="https://marcossunglasses.itch.io"><button class="itch">Itch</button></a>
+    <a href="https://marcossunglasses.itch.io" target="_blank"><button class="itch">Itch</button></a>
 
-        <!-- BICENTENARIO TEATRO -->
-        <a href="https://marcossunglasses.github.io/Archivos/bicentenarioteatro/bicentenarioteatro.html" id="bicentenario-link">
-            <button class="bicentenarioteatro">Bicentenario Teatro</button>
-        </a>
+    <a href="proyectos/bicentenarioteatro.html" id="bicentenario-link" target="_blank">
+        <button class="bicentenarioteatro">Bicentenario Teatro</button>
+    </a>
 
-        <a href="ImChr/imchr.html"><button class="imchr-button"><span>ImChrGames</span></button></a>
-        <a href="TobogAnthony.html"><button class="toboganthony">TobogAnthony</button></a>
-    </div>
+    <a href="proyectos/imchr.html" target="_blank">
+        <button class="imchr-button"><span>ImChrGames</span></button>
+    </a>
 
-    <script>
-        // ABSOLUTO
-        document.getElementById("absoluto-link").addEventListener("click", function(event) {
-            event.preventDefault();
-            alert("Este proyecto no ha sido terminado todavía");
-        });
+    <a href="proyectos/toboganthony.html" target="_blank">
+        <button class="toboganthony">TobogAnthony</button>
+    </a>
 
-        // BICENTENARIO TEATRO
-        document.getElementById("bicentenario-link").addEventListener("click", function(event) {
-            event.preventDefault();
-            const confirmar = confirm("Este proyecto está archivado, ya que fue creado específicamente para una obra de teatro que no salió correctamente.\n\n¿Proceder de todas formas?");
-            if (confirmar) {
-                window.location.href = this.href;
-            }
-        });
-    </script>
+    <!-- NUEVO PROYECTO -->
+    <a href="proyectos/holmentierlist.html" target="_blank">
+        <button class="visualizador">Visualizador de Vid, Img</button>
+    </a>
+</div>
+<script>
+    document.getElementById("absoluto-link").addEventListener("click", function(event) {
+        event.preventDefault();
+        alert("Este proyecto no ha sido terminado todavía");
+    });
 
+    document.getElementById("bicentenario-link").addEventListener("click", function(event) {
+        event.preventDefault();
+        const confirmar = confirm(
+            "Este proyecto está archivado, ya que fue creado específicamente para una obra de teatro que no salió correctamente.\n\n¿Proceder de todas formas?"
+        );
+        if (confirmar) {
+            window.open(this.href, "_blank"); // Abre en nueva pestaña
+        }
+    });
+</script>
 </body>
 </html>

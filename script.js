@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     const images = [
-        'Archivos/Marcos.png',
-        'Archivos/Marcos.png',
-        'Archivos/Marcos.png'
+        'proyectos/Marcos.png',
+        'proyectos/Marcos.png',
+        'proyectos/Marcos.png'
     ];
 
 
