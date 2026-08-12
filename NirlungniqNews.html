@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NirlungniqNews</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+
+    body{
+        background:black;
+        color:white;
+        font-family:Georgia, serif;
+        font-size:12px;
+        width:100vw;
+        height:100vh;
+        overflow:hidden;
+    }
+
+    .pantalla{
+        position:absolute;
+        inset:0;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+    }
+
+    .advertencia h1{
+        font-size:28px;
+        margin-bottom:20px;
+        font-weight:normal;
+    }
+
+    .advertencia p{
+        max-width:500px;
+        line-height:1.6;
+        margin-bottom:25px;
+    }
+
+    .continuar{
+        text-decoration:underline;
+        cursor:pointer;
+    }
+
+    .contenido{
+        display:none;
+    }
+
+    .contenido img{
+        width:40%;
+        height:auto;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="pantalla advertencia" id="advertencia">
+
+    <h1>ERR_SAFE_BROWSING_MALWARE</h1>
+
+    <p>
+        Se han detectado varios reportes de usuarios que afirman haber encontrado
+        desinformación y contenido dañino en este sitio web. Se recomienda no continuar.
+    </p>
+
+    <span class="continuar" onclick="mostrarContenido()">
+        Ir de todos modos
+    </span>
+
+</div>
+
+<div class="pantalla contenido" id="contenido">
+
+    <img
+        src="https://cdn.phototourl.com/free/2026-08-12-5f0669dd-8e2c-47fa-a669-55443c51fd3b.jpg"
+        alt="NirlungniqNews"
+    >
+
+</div>
+
+<script>
+    function mostrarContenido(){
+        document.getElementById("advertencia").style.display = "none";
+        document.getElementById("contenido").style.display = "flex";
+    }
+</script>
+
+</body>
+</html>
